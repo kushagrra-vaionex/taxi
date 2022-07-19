@@ -9,7 +9,6 @@
     "test": "jest",
     "lint": "eslint .",
     "prettier": "prettier --write '*.js' 'src/**/*.js'"
-  
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "2.0.0",
@@ -74,6 +73,7 @@
     "react-native-button": "^3.0.1",
     "react-native-confirmation-code-field": "^6.5.0",
     "react-native-create-thumbnail": "^1.2.2",
+    "react-native-device-info": "^10.0.1",
     "react-native-dialog-input": "^1.0.7",
     "react-native-elements": "^3.4.2",
     "react-native-event-listeners": "^1.0.7",
@@ -99,7 +99,6 @@
     "react-native-modal": "^11.5.6",
     "react-native-modalbox": "^2.0.0",
     "react-native-parsed-text": "^0.0.22",
-    "react-native-paypal": "^4.1.0",
     "react-native-phone-input": "^1.2.0",
     "react-native-popup-menu": "^0.15.9",
     "react-native-progress": "^4.1.2",
@@ -132,7 +131,7 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^8.5.0",
     "jest": "^27.4.5",
-    "jetifier": "^1.6.6",
+    "jetifier": "^2.0.0",
     "metro-react-native-babel-preset": "^0.67.0",
     "prettier": "^2.3.2",
     "react-test-renderer": "17.0.2",
