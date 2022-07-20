@@ -5,14 +5,16 @@ const dynamicStyles = (theme, appearance) => {
     container: {
       padding: 10,
       height: '100%',
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     navHeaderContainer: {
       backgroundColor: theme.colors[appearance].primaryBackground,
     },
     textInput: {
       padding: 10,
-      backgroundColor: theme.colors[appearance].grey2,
+      borderWidth: 1,
+      borderColor:theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
       marginVertical: 5,
       marginLeft: 20,
       color: theme.colors[appearance].secondaryText,
@@ -54,7 +56,7 @@ const dynamicStyles = (theme, appearance) => {
       paddingBottom: 4,
       fontWeight: '400',
       fontSize: 16,
-      color: theme.colors[appearance].primaryText,
+      color: theme.colors[appearance].primaryBackground,
     },
     secondaryLocationText: {
       fontWeight: '400',
@@ -69,7 +71,7 @@ const dynamicStyles = (theme, appearance) => {
     circle: {
       width: 5,
       height: 5,
-      backgroundColor: 'black',
+      backgroundColor: theme.colors[appearance].secondaryBackground,
       position: 'absolute',
       top: 20,
       left: 15,
@@ -86,7 +88,7 @@ const dynamicStyles = (theme, appearance) => {
     square: {
       width: 5,
       height: 5,
-      backgroundColor: theme.colors[appearance].primaryForeground,
+      backgroundColor: theme.colors[appearance].secondaryBackground,
       position: 'absolute',
       top: 80,
       left: 15,

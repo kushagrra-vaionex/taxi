@@ -4,10 +4,10 @@ const dynamicStyles = (theme, appearance) => {
   return new StyleSheet.create({
     container: {
       paddingTop: 12,
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     whereTitleBox: {
-      backgroundColor: theme.colors[appearance].grey2,
+      backgroundColor: theme.colors[appearance].secondaryText,
       margin: 10,
       paddingHorizontal: 15,
       flexDirection: 'row',
@@ -49,7 +49,7 @@ const dynamicStyles = (theme, appearance) => {
       marginLeft: 10,
       fontWeight: '500',
       fontSize: 16,
-      color: theme.colors[appearance].primaryText,
+      color: theme.colors[appearance].secondaryText,
     },
     secondaryLocationText: {
       fontWeight: '400',

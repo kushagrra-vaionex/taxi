@@ -22,7 +22,8 @@ const dynamicStyles = (theme, appearance) => {
     },
     title: {
       marginLeft: 15,
-      color: colorSet.primaryText,
+      //profile setinf and phone
+      color: colorSet.primaryBackground,
       fontSize: 14,
       marginTop: 3,
     },
@@ -30,7 +31,7 @@ const dynamicStyles = (theme, appearance) => {
       height: 20,
       width: 20,
       marginRight: 10,
-      tintColor: colorSet.grey6,
+      tintColor: colorSet.secondaryText,
       transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }],
     },
   })

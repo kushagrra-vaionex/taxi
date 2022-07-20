@@ -23,7 +23,7 @@ const dynamicStyles = (theme, appearance) => {
         },
       ),
       left: 20,
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
       shadowColor: '#000',
       shadowOffset: {
         width: 0,
@@ -36,7 +36,7 @@ const dynamicStyles = (theme, appearance) => {
     icon: {
       height: Math.floor(navIconSize * 0.4),
       width: Math.floor(navIconSize * 0.4),
-      tintColor: theme.colors[appearance].secondaryForeground,
+      tintColor: theme.colors[appearance].green,
     },
   })
 }

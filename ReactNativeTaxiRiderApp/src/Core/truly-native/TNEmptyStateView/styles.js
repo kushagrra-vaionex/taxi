@@ -7,12 +7,12 @@ const dynamicStyles = (theme, colorScheme) => {
       fontSize: 30,
       fontWeight: 'bold',
       alignSelf: 'center',
-      color: colorSet.primaryText,
+      color: colorSet.primaryBackground,
       marginBottom: 15,
     },
     description: {
       alignSelf: 'center',
-      color: colorSet.primaryText,
+      color: colorSet.primaryBackground,
       textAlign: 'center',
       width: '85%',
       lineHeight: 20,
@@ -33,7 +33,7 @@ const dynamicStyles = (theme, colorScheme) => {
       fontWeight: '600',
     },
     container: {
-      backgroundColor: 'transparent',
+      backgroundColor: colorSet.primaryForeground,
     },
   })
 }

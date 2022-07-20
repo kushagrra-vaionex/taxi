@@ -6,10 +6,10 @@ const dynamicStyles = (theme, appearance) => {
   return new StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     navHeaderContainer: {
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     optionsTitleContainer: {
       width: '100%',
@@ -18,7 +18,7 @@ const dynamicStyles = (theme, appearance) => {
       paddingVertical: 10,
     },
     optionsTitle: {
-      color: theme.colors[appearance].primaryText,
+      color: theme.colors[appearance].primaryBackground,
       fontSize: cardInputFontSize,
       paddingLeft: 7,
       fontWeight: 'bold',
@@ -37,7 +37,7 @@ const dynamicStyles = (theme, appearance) => {
       borderBottomWidth: 0.5,
       paddingLeft: 20,
       height: 60,
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     addNewCardContainer: {
       flexDirection: 'row',
@@ -50,7 +50,7 @@ const dynamicStyles = (theme, appearance) => {
       marginVertical: 10,
     },
     addNewCardTitle: {
-      color: theme.colors[appearance].primaryText,
+      color: theme.colors[appearance].primaryBackground,
       fontSize: cardInputFontSize,
       paddingLeft: 7,
     },

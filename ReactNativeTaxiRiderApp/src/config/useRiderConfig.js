@@ -22,7 +22,7 @@ export const ConfigProvider = ({ children }) => {
     forgotPasswordEnabled: true,
     appIdentifier: 'rn-taxi-app-android',
     onboardingConfig: {
-      welcomeTitle: localized('InstaTaxi'),
+      welcomeTitle: localized('Locksmith'),
       welcomeCaption: localized(
         'Book a cab, track your ride and rate your driver.',
       ),

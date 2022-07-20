@@ -10,7 +10,7 @@ const dynamicStyles = (theme, appearance) => {
       borderBottomWidth: 0.5,
       paddingLeft: 20,
       height: 60,
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     methodIconContainer: {
       flex: 1,
@@ -20,7 +20,7 @@ const dynamicStyles = (theme, appearance) => {
     tickIcon: {
       height: 17,
       width: 17,
-      tintColor: theme.colors[appearance].primaryText,
+      tintColor: theme.colors[appearance].secondaryText,
     },
     paymentOptionIconContainer: {
       flex: 0.5,
@@ -38,7 +38,7 @@ const dynamicStyles = (theme, appearance) => {
       marginVertical: 10,
     },
     optionTitle: {
-      color: theme.colors[appearance].primaryText,
+      color: theme.colors[appearance].primaryBackground,
       fontSize: cardInputFontSize,
       paddingLeft: 7,
     },

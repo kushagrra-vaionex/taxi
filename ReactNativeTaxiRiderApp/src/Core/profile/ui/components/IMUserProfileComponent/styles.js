@@ -10,7 +10,7 @@ const dynamicStyles = (theme, appearance) => {
     container: {
       flex: 1,
       alignItems: 'center',
-      backgroundColor: colorSet.primaryBackground,
+      backgroundColor: colorSet.primaryForeground,
     },
     buttonContainer: {
       height: 53,
@@ -42,7 +42,7 @@ const dynamicStyles = (theme, appearance) => {
     },
     userName: {
       marginTop: 5,
-      color: colorSet.primaryText,
+      color: colorSet.secondaryText,
       fontSize: 17,
       marginBottom: 40,
     },
@@ -52,9 +52,10 @@ const dynamicStyles = (theme, appearance) => {
       color: colorSet.primaryText,
       fontSize: 15,
       paddingVertical: 10,
-      borderColor: colorSet.grey3,
+      borderColor: colorSet.green,
       borderRadius: 5,
       textAlign: 'center',
+      backgroundColor:colorSet.green
     },
   })
 }

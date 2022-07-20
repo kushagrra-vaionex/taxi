@@ -4,7 +4,7 @@ const dynamicStyles = (theme, appearance) => {
   return new StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     navHeaderContainer: {
       backgroundColor: theme.colors[appearance].primaryBackground,
@@ -12,6 +12,7 @@ const dynamicStyles = (theme, appearance) => {
     emptyViewContainer: {
       marginTop: '25%',
       flex: 1,
+      //
       backgroundColor: theme.colors[appearance].primaryBackground,
     },
   })

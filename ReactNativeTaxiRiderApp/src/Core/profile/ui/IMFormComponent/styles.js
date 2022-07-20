@@ -5,7 +5,7 @@ const dynamicStyles = (theme, colorScheme) => {
   return StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colorSet.grey0,
+      backgroundColor: colorSet.primaryForeground,
     },
     settingsTitleContainer: {
       width: '100%',
@@ -39,7 +39,7 @@ const dynamicStyles = (theme, colorScheme) => {
       borderTopWidth: 1,
       borderBottomWidth: 1,
       borderColor: colorSet.hairline,
-      backgroundColor: colorSet.primaryBackground,
+      backgroundColor: colorSet.primaryForeground,
     },
     divider: {
       height: 0.5,
@@ -49,7 +49,7 @@ const dynamicStyles = (theme, colorScheme) => {
     },
     text: {
       fontSize: 14,
-      color: colorSet.primaryText,
+      color: colorSet.primaryBackground,
     },
     appSettingsTypeContainer: {
       flexDirection: 'row',
@@ -60,7 +60,7 @@ const dynamicStyles = (theme, colorScheme) => {
     appSettingsSaveContainer: {
       marginTop: 4,
       height: 45,
-      backgroundColor: colorSet.primaryBackground,
+      backgroundColor: colorSet.green,
     },
     placeholderTextColor: {
       color: colorSet.hairline,

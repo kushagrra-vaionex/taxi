@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 const dynamicStyles = (theme, appearance) => {
   return new StyleSheet.create({
     headerContainer: {
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
       padding: 15,
       paddingTop: 10,
       borderTopRightRadius: 15,
@@ -12,7 +12,7 @@ const dynamicStyles = (theme, appearance) => {
     handleContainer: {
       justifyContent: 'center',
       alignItems: 'center',
-      marginBottom: 2,
+      marginBottom: 2,    
     },
     handle: {
       height: 3,

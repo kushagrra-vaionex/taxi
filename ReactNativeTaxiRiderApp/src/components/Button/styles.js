@@ -10,7 +10,7 @@ const dynamicStyles = (theme, appearance) => {
       borderRadius: 12,
     },
     primaryContainer: {
-      backgroundColor: theme.colors[appearance].primaryForeground,
+      backgroundColor: theme.colors[appearance].green,
       alignItems: 'center',
     },
     text: {
@@ -19,7 +19,7 @@ const dynamicStyles = (theme, appearance) => {
       fontSize: 16,
     },
     textPrimary: {
-      color: 'white',
+      color: theme.colors[appearance].primaryForeground,
     },
     disabled: {
       opacity: 0.3,

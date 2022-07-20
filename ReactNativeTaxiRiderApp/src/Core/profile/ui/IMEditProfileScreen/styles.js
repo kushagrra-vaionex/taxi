@@ -4,7 +4,7 @@ const styles = (theme, colorScheme) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors[colorScheme].grey0,
+      backgroundColor: theme.colors[colorScheme].primaryForeground,
     },
     deleteButton: {
       marginVertical: 12,

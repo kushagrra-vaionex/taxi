@@ -4,7 +4,7 @@ const dynamicStyles = (theme, appearance) => {
   return new StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors[appearance].primaryBackground,
+      backgroundColor: theme.colors[appearance].primaryForeground,
     },
     cardField: {
       width: '100%',

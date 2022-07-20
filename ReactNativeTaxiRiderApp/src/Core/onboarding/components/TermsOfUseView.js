@@ -10,12 +10,12 @@ const TermsOfUseView = props => {
   return (
     <View style={style}>
       <Text
-        style={{ fontSize: 12, color: theme.colors[appearance].primaryText }}>
+        style={{ fontSize: 12, color:"#FFFFFF" }}>
         {localized('By creating an account you agree with our')}
       </Text>
       <Text>
         <Text
-          style={{ color: 'blue', fontSize: 12 }}
+          style={{ color: '#5EFF9B', fontSize: 12 }}
           onPress={() => Linking.openURL(tosLink)}>
           {localized('Terms of Use')}
         </Text>
@@ -23,7 +23,7 @@ const TermsOfUseView = props => {
           <Text style={{ fontSize: 12 }}>
             {localized(' and ')}
             <Text
-              style={{ color: 'blue', fontSize: 12 }}
+              style={{ color: '#5EFF9B', fontSize: 12 }}
               onPress={() => Linking.openURL(privacyPolicyLink)}>
               {localized('Privacy Policy')}
             </Text>

@@ -6,10 +6,10 @@ const dynamicStyles = (theme, colorScheme) => {
     container: {
       flex: 1,
       alignItems: 'center',
-      backgroundColor: colorSet.primaryBackground,
+      backgroundColor: colorSet.primaryForeground,
     },
     orTextStyle: {
-      color: colorSet.primaryText,
+      color: colorSet.primaryBackground,
       marginTop: 40,
       marginBottom: 10,
       alignSelf: 'center',
@@ -17,7 +17,7 @@ const dynamicStyles = (theme, colorScheme) => {
     title: {
       fontSize: 30,
       fontWeight: 'bold',
-      color: colorSet.primaryForeground,
+      color: colorSet.primaryBackground,
       marginTop: 25,
       marginBottom: 20,
       alignSelf: 'stretch',
@@ -26,14 +26,14 @@ const dynamicStyles = (theme, colorScheme) => {
     },
     loginContainer: {
       width: '70%',
-      backgroundColor: colorSet.primaryForeground,
+      backgroundColor: colorSet.green,
       borderRadius: 25,
       padding: 10,
       marginTop: 30,
       alignSelf: 'center',
     },
     loginText: {
-      color: '#ffffff',
+      color:colorSet.primaryForeground,
     },
     placeholder: {
       color: 'red',
@@ -41,10 +41,10 @@ const dynamicStyles = (theme, colorScheme) => {
     InputContainer: {
       height: 42,
       borderWidth: 1,
-      borderColor: colorSet.grey3,
-      backgroundColor: colorSet.primaryBackground,
+      borderColor: colorSet.primaryBackground,
+      backgroundColor: colorSet.primaryForeground,
       paddingLeft: 20,
-      color: colorSet.primaryText,
+      color: colorSet.primaryBackground,
       width: '80%',
       alignSelf: 'center',
       marginTop: 20,
@@ -74,7 +74,7 @@ const dynamicStyles = (theme, colorScheme) => {
       alignSelf: 'center',
     },
     facebookText: {
-      color: '#ffffff',
+      color:'#ffffff',
       fontSize: 14,
     },
     phoneNumberContainer: {
@@ -89,10 +89,11 @@ const dynamicStyles = (theme, colorScheme) => {
     forgotPasswordText: {
       fontSize: 14,
       padding: 4,
+      color:colorSet.green
     },
     backArrowStyle: {
       resizeMode: 'contain',
-      tintColor: colorSet.primaryForeground,
+      tintColor: colorSet.primaryBackground,
       width: 25,
       height: 25,
       marginTop: Platform.OS === 'ios' ? 50 : 20,
