@@ -69,7 +69,7 @@ const TripsNavigator = props => {
       <TripsStack.Screen
         name={'Trips'}
         options={{
-          headerTitle: localized('Your Trips'),
+          headerTitle: localized('Your Requests'),
         }}
         component={TripHistoryScreen}
       />

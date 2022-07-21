@@ -94,7 +94,7 @@ const ProfileScreen = () => {
     },
   ]
 
-  return (
+  return ( 
     <IMUserProfileComponent
       user={currentUser}
       onUpdateUser={onUpdateUser}

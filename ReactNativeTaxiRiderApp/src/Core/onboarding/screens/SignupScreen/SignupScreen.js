@@ -20,6 +20,7 @@ import { localizedErrorMessage } from '../../api/ErrorCode'
 import TermsOfUseView from '../../components/TermsOfUseView'
 import { useOnboardingConfig } from '../../hooks/useOnboardingConfig'
 import { useAuth } from '../../hooks/useAuth'
+import LinearGradient from 'react-native-linear-gradient';
 
 const SignupScreen = props => {
   const { navigation } = props
@@ -192,7 +193,7 @@ const SignupScreen = props => {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       <KeyboardAwareScrollView
         style={{ flex: 1, width: '100%' }}
         keyboardShouldPersistTaps="always">
@@ -221,7 +222,7 @@ const SignupScreen = props => {
         />
       </KeyboardAwareScrollView>
       {loading && <TNActivityIndicator />}
-    </View>
+    </LinearGradient>
   )
 }
 

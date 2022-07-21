@@ -14,6 +14,8 @@ import {
 } from '../../../onboarding/api/ErrorCode'
 import dynamicStyles from './styles'
 import { useCurrentUser } from '../../../onboarding'
+import LinearGradient from 'react-native-linear-gradient';
+
 
 export default function IMEditProfileScreen(props) {
   const { navigation, route } = props
@@ -170,7 +172,7 @@ export default function IMEditProfileScreen(props) {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       <IMFormComponent
         form={form}
         initialValuesDict={currentUser}
@@ -180,6 +182,6 @@ export default function IMEditProfileScreen(props) {
       <TextButton style={styles.deleteButton} onPress={onDeletePrompt}>
         {localized('Delete Account')}
       </TextButton>
-    </View>
+    </LinearGradient>
   )
 }

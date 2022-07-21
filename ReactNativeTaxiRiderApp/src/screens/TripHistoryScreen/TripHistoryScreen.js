@@ -7,6 +7,7 @@ import MenuIcon from '../../components/MenuIcon/MenuIcon'
 import { tripsAPIManager } from '../../api'
 import dynamicStyles from './styles'
 import { TNActivityIndicator, TNEmptyStateView } from '../../Core/truly-native'
+import LinearGradient from 'react-native-linear-gradient'
 
 export default function TripHistoryScreen({ navigation }) {
   const { localized } = useTranslations()
@@ -19,7 +20,7 @@ export default function TripHistoryScreen({ navigation }) {
   const [trips, setTrips] = useState([])
 
   const emptyStateConfig = {
-    title: localized('No Rides'),
+    title: localized('Nobody service personal available'),
     description: localized(
       'You have not ordered any rides yet. All your completed trips will appear here.',
     ),
@@ -60,22 +61,30 @@ export default function TripHistoryScreen({ navigation }) {
   }
 
   const renderTripItem = ({ item, index }) => {
-    return <TripHistoryItem key={item.id ?? `${index}`} item={item} />
+
+    return (
+    
+    <TripHistoryItem key={item.id ?? `${index}`} item={item} />
+    )
   }
 
   const renderEmptyState = () => {
     return (
-      <View style={styles.emptyViewContainer}>
+      <LinearGradient
+        colors={[theme.colors[appearance].grey, theme.colors[appearance].black]}
+        style={styles.emptyViewContainer}>
         <TNEmptyStateView emptyStateConfig={emptyStateConfig} />
-      </View>
+      </LinearGradient>
     )
   }
 
   if (loading) {
     return (
-      <View style={styles.container}>
+      <LinearGradient
+        colors={[theme.colors[appearance].grey, theme.colors[appearance].black]}
+        style={styles.container}>
         <TNActivityIndicator />
-      </View>
+      </LinearGradient>
     )
   }
 
@@ -85,7 +94,7 @@ export default function TripHistoryScreen({ navigation }) {
       data={trips}
       keyExtractor={(item, index) => item.id ?? `${index}`}
       renderItem={renderTripItem}
-      ListEmptyComponent={renderEmptyState}
+      ListEmptyComponent={renderEmptyState}   
     />
   )
 }

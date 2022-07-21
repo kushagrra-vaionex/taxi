@@ -11,6 +11,8 @@ import dynamicStyles from './styles'
 import MenuIcon from '../../components/MenuIcon/MenuIcon'
 import { useConfig } from '../../config'
 import { updateUser } from '../../Core/users'
+import LinearGradient from 'react-native-linear-gradient';
+
 
 export default function WalletScreen(props) {
   const { navigation, route } = props
@@ -106,7 +108,7 @@ export default function WalletScreen(props) {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       <View style={styles.optionsTitleContainer}>
         <Text style={styles.optionsTitle}>{localized('Payment Method')}</Text>
       </View>
@@ -114,6 +116,6 @@ export default function WalletScreen(props) {
         onAddNewCard={onAddNewCard}
         onPaymentMethodLongPress={removeFromPaymentMethods}
       />
-    </View>
+    </LinearGradient>
   )
 }

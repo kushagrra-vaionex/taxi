@@ -4,6 +4,7 @@ import { View, Text, TextInput, TouchableOpacity, Switch } from 'react-native'
 import ActionSheet from 'react-native-actionsheet'
 import { useTheme, useTranslations } from 'dopenative'
 import dynamicStyles from './styles'
+import LinearGradient from 'react-native-linear-gradient'
 
 function IMFormComponent(props) {
   const { form, initialValuesDict, onFormChange, onFormButtonPress } = props
@@ -161,9 +162,9 @@ function IMFormComponent(props) {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       {form.sections.map(section => renderSection(section))}
-    </View>
+    </LinearGradient>
   )
 }
 

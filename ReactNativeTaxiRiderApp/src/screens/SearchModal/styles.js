@@ -17,7 +17,7 @@ const dynamicStyles = (theme, appearance) => {
       backgroundColor: theme.colors[appearance].primaryForeground,
       marginVertical: 5,
       marginLeft: 20,
-      color: theme.colors[appearance].secondaryText,
+      color: theme.colors[appearance].primaryBackground,
       borderRadius: 3,
     },
     textInputContainer: {
@@ -47,7 +47,7 @@ const dynamicStyles = (theme, appearance) => {
       height: 64,
       // borderBottomColor: theme.colors[appearance].grey1,
       // borderBottomWidth: 1,
-    },
+    },  
     locationTextContainer: {
       height: '100%',
       justifyContent: 'center',

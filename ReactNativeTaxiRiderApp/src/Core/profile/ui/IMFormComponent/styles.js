@@ -13,7 +13,7 @@ const dynamicStyles = (theme, colorScheme) => {
       justifyContent: 'flex-end',
     },
     settingsTitle: {
-      color: colorSet.secondaryText,
+      color: colorSet.primaryBackground,
       paddingLeft: 10,
       fontSize: 14,
       paddingBottom: 6,

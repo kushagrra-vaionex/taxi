@@ -22,6 +22,7 @@ import { setUserData } from '../../redux/auth'
 import { localizedErrorMessage } from '../../api/ErrorCode'
 import { useOnboardingConfig } from '../../hooks/useOnboardingConfig'
 import { useAuth } from '../../hooks/useAuth'
+import LinearGradient from 'react-native-linear-gradient';
 
 const LoginScreen = props => {
   const { navigation } = props
@@ -158,7 +159,7 @@ const LoginScreen = props => {
     : {}
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       <KeyboardAwareScrollView
         style={{ flex: 1, width: '100%' }}
         keyboardShouldPersistTaps="always">
@@ -239,7 +240,7 @@ const LoginScreen = props => {
 
         {loading && <TNActivityIndicator />}
       </KeyboardAwareScrollView>
-    </View>
+    </LinearGradient>
   )
 }
 

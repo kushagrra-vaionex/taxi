@@ -22,10 +22,10 @@ export const ConfigProvider = ({ children }) => {
     forgotPasswordEnabled: true,
     appIdentifier: 'rn-taxi-app-android',
     onboardingConfig: {
-      welcomeTitle: localized('Locksmith'),
-      welcomeCaption: localized(
-        'Book a cab, track your ride and rate your driver.',
-      ),
+     // welcomeTitle: localized('Locksmith'),
+      // welcomeCaption: localized(
+      //   'Book a cab, track your ride and rate your driver.',
+      // ),
       walkthroughScreens: [
         {
           icon: require('../assets/icons/booktaxi.png'),
@@ -92,7 +92,7 @@ export const ConfigProvider = ({ children }) => {
           navigationPath: 'Home',
         },
         {
-          title: localized('Your Trips'),
+          title: localized('Your Requests'),
           navigationPath: 'Trips',
         },
         {

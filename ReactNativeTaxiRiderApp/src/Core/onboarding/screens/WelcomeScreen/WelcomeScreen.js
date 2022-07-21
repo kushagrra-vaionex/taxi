@@ -12,6 +12,8 @@ import { IMDismissButton } from '../../../truly-native'
 import { useOnboardingConfig } from '../../hooks/useOnboardingConfig'
 import { useAuth } from '../../hooks/useAuth'
 import useCurrentUser from '../../hooks/useCurrentUser'
+import {lightColors} from '../../../../theme/index'
+import LinearGradient from 'react-native-linear-gradient';
 
 const WelcomeScreen = props => {
   const { navigation } = props
@@ -98,7 +100,7 @@ const WelcomeScreen = props => {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       {props.delayedMode && (
         <IMDismissButton
           style={styles.dismissButton}
@@ -154,7 +156,7 @@ const WelcomeScreen = props => {
         }}>
         {localized('Sign Up')}
       </Button>
-    </View>
+    </LinearGradient>
   )
 }
 

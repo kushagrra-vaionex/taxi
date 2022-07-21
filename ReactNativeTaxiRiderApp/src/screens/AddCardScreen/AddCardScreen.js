@@ -8,6 +8,8 @@ import { usePaymentRequest } from '../../Core/payment/api'
 import { useConfig } from '../../config'
 import { useTheme, useTranslations } from 'dopenative'
 import dynamicStyles from './styles'
+import LinearGradient from 'react-native-linear-gradient';
+
 
 export default function AddCardScreen({ navigation }) {
   const currentUser = useSelector(state => state.auth.user)
@@ -127,7 +129,7 @@ export default function AddCardScreen({ navigation }) {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       <CardField
         postalCodeEnabled={false}
         onCardChange={onCardChange}
@@ -141,6 +143,6 @@ export default function AddCardScreen({ navigation }) {
           loading={loading}
         />
       </View>
-    </View>
+    </LinearGradient>
   )
 }

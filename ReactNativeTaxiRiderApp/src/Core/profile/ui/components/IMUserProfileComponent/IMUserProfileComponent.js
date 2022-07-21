@@ -8,6 +8,7 @@ import { TNProfilePictureSelector } from '../../../../truly-native'
 import { updateProfilePhoto } from '../../../../users'
 import { storageAPI } from '../../../../media'
 import { useCurrentUser } from '../../../../onboarding'
+import LinearGradient from 'react-native-linear-gradient';
 
 const IMUserProfileComponent = props => {
   const { menuItems, onUpdateUser, onLogout } = props
@@ -80,7 +81,7 @@ const IMUserProfileComponent = props => {
   const myProfileScreenContent = () => {
     return (
       <>
-        <View style={styles.container}>
+        <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]}  style={styles.container}>
           <StatusBar
           // backgroundColor={useDynamicValue('#ffffff', '#121212')}
           // barStyle={useDynamicValue('dark-content', 'light-content')}
@@ -98,7 +99,7 @@ const IMUserProfileComponent = props => {
           <Text onPress={onLogout} style={styles.logout}>
             {localized('Logout')}
           </Text>
-        </View>
+        </LinearGradient>
       </>
     )
   }
