@@ -72,7 +72,7 @@
     "react-native-autogrow-textinput": "^5.4.0",
     "react-native-button": "^3.0.1",
     "react-native-confirmation-code-field": "^6.5.0",
-    "react-native-create-thumbnail": "^1.2.2",
+    "react-native-create-thumbnail": "^1.5.1",
     "react-native-device-info": "^10.0.1",
     "react-native-dialog-input": "^1.0.7",
     "react-native-elements": "^3.4.2",
