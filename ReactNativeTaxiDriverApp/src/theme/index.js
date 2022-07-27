@@ -15,7 +15,7 @@ const icons = {
   mapLocation: require('../assets/icons/map-location.png'),
   driver: require('../assets/icons/driver.png'),
   markerImage: require('../assets/icons/marker.png'),
-  logo: require('../assets/icons/applogo.png'),
+  logo: require('../assets/icons/edit.png'),
   backArrow: require('../assets/icons/backArrow.png'),
   userAvatar: require('../assets/icons/default-avatar.jpg'),
   close: require('../assets/icons/close-x-icon.png'),

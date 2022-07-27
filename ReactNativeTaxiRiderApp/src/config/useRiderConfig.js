@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useTheme, useTranslations } from 'dopenative'
+import { Platform } from 'react-native'
 
 const regexForNames = /^[a-zA-Z]{2,25}$/
 const regexForPhoneNumber = /\d{9}$/
@@ -22,44 +23,42 @@ export const ConfigProvider = ({ children }) => {
     forgotPasswordEnabled: true,
     appIdentifier: 'rn-taxi-app-android',
     onboardingConfig: {
-     // welcomeTitle: localized('Locksmith'),
+      // welcomeTitle: localized('Locksmith'),
       // welcomeCaption: localized(
       //   'Book a cab, track your ride and rate your driver.',
       // ),
       walkthroughScreens: [
         {
-          icon: require('../assets/icons/booktaxi.png'),
-          title: localized('Book a Taxi'),
-          description: localized(
-            'Choose the pick up location and the destination for your trip and a driver will automatically pick you up.',
-          ),
+          icon: require('../assets/icons/booktaxi.jpg.png'),
+          title: localized('Book a Service'),
+          description: localized('Service professional at your doorstep!'),
         },
         {
           icon: require('../assets/icons/maptrack.png'),
-          title: localized('Track Your Ride'),
+          title: localized('Track Your Service personal'),
           description: localized(
-            'Visualize the driver on the interactive map and track your ride.',
+            'Visualize the service personal on the interactive map and track it.',
           ),
         },
         {
           icon: require('../assets/icons/paytaxi.png'),
-          title: localized('Pay for Your Ride'),
+          title: localized('Pay for Your Service'),
           description: localized(
-            'Pay for your ride with Apple Pay, Android Pay, Cash or Credit Cards.',
+            'Pay for your service with Apple Pay, Android Pay, Cash or Credit Cards.',
           ),
         },
         {
           icon: require('../assets/icons/star.png'),
-          title: localized('Rate Your Driver'),
+          title: localized('Rate Your Service Personal'),
           description: localized(
-            'Rate your driver after each ride to improve the quality of your rides.',
+            'Rate your service personal after each service to improve the quality of your service.',
           ),
         },
         {
           icon: require('../assets/icons/triphistory.png'),
-          title: localized('Trips History'),
+          title: localized('Services History'),
           description: localized(
-            'Check out the entire history of your trips instantly.',
+            'Check out the entire history of your services instantly.',
           ),
         },
       ],
@@ -92,7 +91,7 @@ export const ConfigProvider = ({ children }) => {
           navigationPath: 'Home',
         },
         {
-          title: localized('Your Requests'),
+          title: localized('Your Service Requests'),
           navigationPath: 'Trips',
         },
         {
@@ -259,15 +258,15 @@ export const ConfigProvider = ({ children }) => {
             {
               displayName: localized('Address'),
               type: 'text',
-              editable: false,
+              editable: true,
               key: 'push_notifications_enabled',
               value: '142 Steiner Street, San Francisco, CA, 94115',
             },
             {
               displayName: localized('E-mail us'),
-              value: 'florian@instamobile.io',
+              value: 'admin@vaionex.com',
               type: 'text',
-              editable: false,
+              editable: true,
               key: 'email',
               placeholder: 'Your e-mail address',
             },

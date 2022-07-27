@@ -27,19 +27,19 @@ export const ConfigProvider = ({ children }) => {
       RESERVATIONS: 'reservations',
     },
     onboardingConfig: {
-      welcomeTitle: localized('Instataxi Driver'),
-      welcomeCaption: localized('Make money by completing trips.'),
+      welcomeTitle: localized('Pickle Service Provider'),
+      welcomeCaption: localized('Make money by completing service request.'),
       walkthroughScreens: [
         {
           icon: require('../assets/icons/accept-decline.png'),
           title: localized('Accept - Decline offers'),
-          description: localized('Get multiple trip Offers to choose from'),
+          description: localized('Get multiple service Offers to choose from'),
         },
         {
           icon: require('../assets/icons/income.png'),
           title: localized('Get paid'),
           description: localized(
-            'Be your own boss and earn when you complete a trip.',
+            'Be your own boss and earn when you complete a service.',
           ),
         },
         {
@@ -71,21 +71,21 @@ export const ConfigProvider = ({ children }) => {
         placeholder: 'Last Name',
       },
       {
-        displayName: localized('Car Model'),
+        displayName: localized('Service Type'),
         type: 'ascii-capable',
         editable: true,
         regex: regexForNames,
         key: 'carName',
-        placeholder: localized('Car Model'),
+        placeholder: localized('Service Type'),
       },
-      {
-        displayName: localized('Car License Plate'),
-        type: 'ascii-capable',
-        editable: true,
-        regex: regexForNames,
-        key: 'carNumber',
-        placeholder: localized('Car License Plate'),
-      },
+      // {
+      //   displayName: localized('Car License Plate'),
+      //   type: 'ascii-capable',
+      //   editable: true,
+      //   regex: regexForNames,
+      //   key: 'carNumber',
+      //   placeholder: localized('Car License Plate'),
+      // },
     ],
     signupFields: [
       {
@@ -114,21 +114,21 @@ export const ConfigProvider = ({ children }) => {
         autoCapitalize: 'none',
       },
       {
-        displayName: localized('Car Model'),
+        displayName: localized('Service Type'),
         type: 'ascii-capable',
         editable: true,
         regex: regexForNames,
         key: 'carName',
-        placeholder: localized('Car Model'),
+        placeholder: localized('Service Type'),
       },
-      {
-        displayName: localized('Car License Plate'),
-        type: 'ascii-capable',
-        editable: true,
-        regex: regexForNames,
-        key: 'carNumber',
-        placeholder: localized('Car License Plate'),
-      },
+      // {
+      //   displayName: localized('Car License Plate'),
+      //   type: 'ascii-capable',
+      //   editable: true,
+      //   regex: regexForNames,
+      //   key: 'carNumber',
+      //   placeholder: localized('Car License Plate'),
+      // },
       {
         displayName: localized('Password'),
         type: 'default',
@@ -163,41 +163,41 @@ export const ConfigProvider = ({ children }) => {
             },
           ],
         },
-        {
-          title: localized('CAR DETAILS'),
-          fields: [
-            {
-              displayName: localized('Car Name'),
-              type: 'text',
-              editable: true,
-              key: 'carName',
-              placeholder: 'Your car name',
-            },
-            {
-              displayName: localized('Car Number'),
-              type: 'text',
-              editable: true,
-              key: 'carNumber',
-              placeholder: 'Your car number',
-            },
-            {
-              displayName: localized('Car Type'),
-              type: 'select',
-              options: ['uber_x', 'comfort', 'uber_xl', 'none'],
-              displayOptions: ['TaxiX', 'Comfort', 'TaxiXL', 'None'],
-              editable: true,
-              key: 'carType',
-              value: 'None',
-            },
-          ],
-        },
+        // {
+        //   title: localized('CAR DETAILS'),
+        //   fields: [
+        //     {
+        //       displayName: localized('Car Name'),
+        //       type: 'text',
+        //       editable: true,
+        //       key: 'carName',
+        //       placeholder: 'Your car name',
+        //     },
+        //     {
+        //       displayName: localized('Car Number'),
+        //       type: 'text',
+        //       editable: true,
+        //       key: 'carNumber',
+        //       placeholder: 'Your car number',
+        //     },
+        //     {
+        //       displayName: localized('Car Type'),
+        //       type: 'select',
+        //       options: ['uber_x', 'comfort', 'uber_xl', 'none'],
+        //       displayOptions: ['TaxiX', 'Comfort', 'TaxiXL', 'None'],
+        //       editable: true,
+        //       key: 'carType',
+        //       value: 'None',
+        //     },
+        //   ],
+        // },
         {
           title: localized('PRIVATE DETAILS'),
           fields: [
             {
               displayName: localized('E-mail Address'),
               type: 'text',
-              editable: false,
+              editable: true,
               key: 'email',
               placeholder: 'Your email address',
             },
@@ -260,11 +260,11 @@ export const ConfigProvider = ({ children }) => {
               type: 'text',
               editable: false,
               key: 'contacus',
-              value: '142 Steiner Street, San Francisco, CA, 94115',
+              value: '19702 Newark, Delaware, USA',
             },
             {
               displayName: localized('E-mail us'),
-              value: 'florian@instamobile.io',
+              value: 'one@vaionex.com',
               type: 'text',
               editable: false,
               key: 'email',

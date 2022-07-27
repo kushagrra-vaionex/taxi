@@ -7,8 +7,7 @@ import { setDestination, setOrigin } from '../../redux'
 import dynamicStyles from './styles.js'
 import PlaceRow from './PlaceRow'
 import { useConfig } from '../../config'
-import LinearGradient from 'react-native-linear-gradient';
-
+import LinearGradient from 'react-native-linear-gradient'
 
 export default function SearchModal({ navigation, route }) {
   const { localized } = useTranslations()
@@ -114,7 +113,7 @@ export default function SearchModal({ navigation, route }) {
 
   const routeAutoCompleteProps = {
     origin: {
-    // placeholder: localized('Where from?'),
+      //placeholder: localized('Where from?'),
       onPress: onSetOrigin,
       currentLocation: true,
       currentLocationLabel: localized('Current location'),
@@ -181,7 +180,9 @@ export default function SearchModal({ navigation, route }) {
   }
 
   return (
-    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]}  style={styles.container}>
+    <LinearGradient
+      colors={[theme.colors[appearance].grey, theme.colors[appearance].black]}
+      style={styles.container}>
       {!updatingDestination &&
         renderGooglePlacesAutocomplete(
           generalAutoCompleteProps,

@@ -20,9 +20,9 @@ export default function TripHistoryScreen({ navigation }) {
   const [trips, setTrips] = useState([])
 
   const emptyStateConfig = {
-    title: localized('Nobody service personal available'),
+    title: localized('No service personal available'),
     description: localized(
-      'You have not ordered any rides yet. All your completed trips will appear here.',
+      'You have not ordered any services yet. All your completed services will appear here.',
     ),
   }
 
@@ -61,11 +61,7 @@ export default function TripHistoryScreen({ navigation }) {
   }
 
   const renderTripItem = ({ item, index }) => {
-
-    return (
-    
-    <TripHistoryItem key={item.id ?? `${index}`} item={item} />
-    )
+    return <TripHistoryItem key={item.id ?? `${index}`} item={item} />;
   }
 
   const renderEmptyState = () => {
@@ -94,7 +90,7 @@ export default function TripHistoryScreen({ navigation }) {
       data={trips}
       keyExtractor={(item, index) => item.id ?? `${index}`}
       renderItem={renderTripItem}
-      ListEmptyComponent={renderEmptyState}   
+      ListEmptyComponent={renderEmptyState}
     />
   )
 }
