@@ -15,8 +15,8 @@ const dynamicStyles = (theme, appearance) => {
       alignItems: 'center',
     },
     whereTitleText: {
-      fontSize: 20,
-      fontWeight: '600',
+      fontSize: 12,
+      fontWeight: '60',
       color: theme.colors[appearance].primaryText,
     },
     searchContainer: {
