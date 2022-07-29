@@ -46,7 +46,7 @@ const HomeSheet = props => {
       navigation.navigate('RideTypesSheet')
       hasNavigated.current = true
     }
-  }, [hasRoute, isFocus])
+  }, [hasRoute, isFocus, navigation])
 
   useEffect(() => {
     if (isFocus && layoutHeight.current) {
@@ -68,14 +68,14 @@ const HomeSheet = props => {
       dispatch(setDestination(null))
       hasNavigated.current = false
     }
-  }, [isFocus])
+  }, [destination, dispatch, isFocus, minLayoutHeight, navigation])
 
   const contentContainerStyle = useMemo(
     () => ({
       ...styles.container,
       height: contentHeght + safeBottomArea + 20 + ifIphoneX(0, 5),
     }),
-    [safeBottomArea],
+    [contentHeght, safeBottomArea, styles.container],
   )
 
   const onSearchLocation = () => {
@@ -147,7 +147,7 @@ const HomeSheet = props => {
       )
       layoutHeight.current = height
     },
-    [],
+    [dispatch, minLayoutHeight],
   )
 
   const getIcon = name => {
@@ -193,16 +193,17 @@ const HomeSheet = props => {
       style={contentContainerStyle}
       onLayout={isFocus && handleOnLayout}>
       <Pressable
-        onPress={onSearchLocation}
+        // onPress={onSearchLocation}
         style={[styles.whereTitleBox, { height: whereTitleBoxHeight }]}>
-        <Text style={styles.whereTitleText}>{localized('Where to?')}</Text>
+        <Text style={styles.whereTitleText}>
+          {localized('Add Service Description')}
+        </Text>
 
-        <View style={styles.searchContainer}>
-          <Text style={styles.searchTitle}>{localized('Search')}</Text>
-        </View>
+        {/*<View style={styles.searchContainer}>*/}
+        {/*  <Text style={styles.searchTitle}>{localized('Search')}</Text>*/}
+        {/*</View>*/}
       </Pressable>
-
-      {savedPlaces.map(renderSavedPlace)}
+      {/*{savedPlaces.map(renderSavedPlace)}*/}
     </BottomSheetView>
   )
 }
