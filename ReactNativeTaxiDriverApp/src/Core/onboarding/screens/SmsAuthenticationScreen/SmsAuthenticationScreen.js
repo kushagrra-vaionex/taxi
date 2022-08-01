@@ -32,6 +32,7 @@ import dynamicStyles from './styles'
 import IMGoogleSignInButton from '../../components/IMGoogleSignInButton/IMGoogleSignInButton'
 import { useOnboardingConfig } from '../../hooks/useOnboardingConfig'
 import { useAuth } from '../../hooks/useAuth'
+import LinearGradient from 'react-native-linear-gradient'
 
 const codeInputCellCount = 6
 
@@ -494,7 +495,7 @@ const SmsAuthenticationScreen = props => {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={['grey','black']} style={styles.container}>
       <KeyboardAwareScrollView
         style={{ flex: 1, width: '100%' }}
         keyboardShouldPersistTaps="always">
@@ -512,7 +513,7 @@ const SmsAuthenticationScreen = props => {
         )}
       </KeyboardAwareScrollView>
       {loading && <TNActivityIndicator />}
-    </View>
+    </LinearGradient>
   )
 }
 

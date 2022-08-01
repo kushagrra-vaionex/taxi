@@ -16,7 +16,7 @@ const dynamicStyles = (theme, colorScheme) => {
     title: {
       fontSize: 30,
       fontWeight: 'bold',
-      color: colorSet.primaryForeground,
+      color: colorSet.primaryBackground,
       marginTop: 25,
       marginBottom: 30,
       alignSelf: 'stretch',
@@ -62,13 +62,13 @@ const dynamicStyles = (theme, colorScheme) => {
     signupContainer: {
       alignSelf: 'center',
       width: '65%',
-      backgroundColor: colorSet.primaryForeground,
+      backgroundColor: colorSet.green,
       borderRadius: 25,
       padding: 10,
       marginTop: 50,
     },
     signupText: {
-      color: colorSet.primaryBackground,
+      color: colorSet.primaryForeground,
     },
     image: {
       width: '100%',
@@ -118,7 +118,7 @@ const dynamicStyles = (theme, colorScheme) => {
       marginTop: 20,
       marginBottom: 10,
       alignSelf: 'center',
-      color: colorSet.primaryText,
+      color: colorSet.primaryBackground,
     },
     PhoneNumberContainer: {
       marginTop: 10,
@@ -136,7 +136,7 @@ const dynamicStyles = (theme, colorScheme) => {
     },
     backArrowStyle: {
       resizeMode: 'contain',
-      tintColor: colorSet.primaryForeground,
+      tintColor: colorSet.primaryBackground,
       width: 25,
       height: 25,
       marginTop: Platform.OS === 'ios' ? 50 : 20,
