@@ -16,7 +16,7 @@ const dynamicStyles = (theme, colorScheme) => {
     title: {
       fontSize: 30,
       fontWeight: 'bold',
-      color: colorSet.primaryForeground,
+      color: colorSet.primaryBackground,
       marginTop: 25,
       marginBottom: 50,
       alignSelf: 'stretch',
@@ -25,14 +25,14 @@ const dynamicStyles = (theme, colorScheme) => {
     },
     sendContainer: {
       width: '70%',
-      backgroundColor: colorSet.primaryForeground,
+      backgroundColor: colorSet.green,
       borderRadius: 25,
       padding: 10,
       marginTop: 30,
       alignSelf: 'center',
     },
     sendText: {
-      color: '#ffffff',
+      color: colorSet.primaryForeground,
     },
     InputContainer: {
       height: 42,
@@ -110,7 +110,7 @@ const dynamicStyles = (theme, colorScheme) => {
       marginTop: 40,
       marginBottom: 10,
       alignSelf: 'center',
-      color: colorSet.primaryText,
+      color: colorSet.primaryBackground,
     },
     facebookContainer: {
       width: '70%',
@@ -147,7 +147,7 @@ const dynamicStyles = (theme, colorScheme) => {
     },
     backArrowStyle: {
       resizeMode: 'contain',
-      tintColor: colorSet.primaryForeground,
+      tintColor: colorSet.primaryBackground,
       width: 25,
       height: 25,
       marginTop: Platform.OS === 'ios' ? 50 : 20,

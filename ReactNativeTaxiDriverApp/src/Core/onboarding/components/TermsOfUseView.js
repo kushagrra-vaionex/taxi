@@ -15,7 +15,7 @@ const TermsOfUseView = props => {
       </Text>
       <Text>
         <Text
-          style={{ color: 'blue', fontSize: 12 }}
+          style={{ color: '#5EFF9B', fontSize: 12 }}
           onPress={() => Linking.openURL(tosLink)}>
           {localized('Terms of Use')}
         </Text>
