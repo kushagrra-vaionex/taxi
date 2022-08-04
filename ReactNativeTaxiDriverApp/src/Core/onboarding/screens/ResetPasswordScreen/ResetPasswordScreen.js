@@ -14,6 +14,7 @@ import TNActivityIndicator from '../../../truly-native/TNActivityIndicator/TNAct
 import dynamicStyles from './styles'
 import { useAuth } from '../../hooks/useAuth'
 import { localizedErrorMessage } from '../../api/ErrorCode'
+import LinearGradient from 'react-native-linear-gradient'
 
 const ResetPasswordScreen = props => {
   const authManager = useAuth()
@@ -71,7 +72,7 @@ const ResetPasswordScreen = props => {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={[theme.colors[appearance].grey,theme.colors[appearance].black]} style={styles.container}>
       <KeyboardAwareScrollView
         style={{ flex: 1, width: '100%' }}
         keyboardShouldPersistTaps="always">
@@ -96,7 +97,7 @@ const ResetPasswordScreen = props => {
         </Button>
       </KeyboardAwareScrollView>
       {isLoading && <TNActivityIndicator />}
-    </View>
+    </LinearGradient>
   )
 }
 

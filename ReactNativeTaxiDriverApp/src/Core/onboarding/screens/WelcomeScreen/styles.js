@@ -27,7 +27,7 @@ const dynamicStyles = (theme, colorScheme) => {
     title: {
       fontSize: 30,
       fontWeight: 'bold',
-      color: colorSet.primaryForeground,
+      color: colorSet.primaryBackground,
       marginTop: 20,
       marginBottom: 20,
       textAlign: 'center',
@@ -41,7 +41,7 @@ const dynamicStyles = (theme, colorScheme) => {
     },
     loginContainer: {
       width: '70%',
-      backgroundColor: colorSet.primaryForeground,
+      backgroundColor: colorSet.green,
       borderRadius: 25,
       padding: 10,
       marginTop: 30,
@@ -50,7 +50,7 @@ const dynamicStyles = (theme, colorScheme) => {
       height: 48,
     },
     loginText: {
-      color: colorSet.primaryBackground,
+      color: colorSet.primaryForeground,
     },
     signupContainer: {
       justifyContent: 'center',
