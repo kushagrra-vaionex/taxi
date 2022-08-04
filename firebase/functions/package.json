@@ -10,7 +10,7 @@
     "logs": "firebase functions:log"
   },
   "engines": {
-    "node": "14"
+    "node": "16"
   },
   "main": "index.js",
   "dependencies": {
@@ -25,9 +25,8 @@
     "twilio": "^3.48.0"
   },
   "devDependencies": {
-    "eslint": "^7.6.0",
+    "eslint": "^8.9.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-promise": "^4.3.1",
     "firebase-functions-test": "^0.2.0"
   },
   "private": true

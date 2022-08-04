@@ -37,7 +37,8 @@ exports.getAllUsersBlockingMe = async userID => {
 }
 
 // get the list of reported users => blocked users
-exports.fetchBlockedUsers = functions.https.onCall(async (data, context) => {
+// eslint-disable-next-line consistent-return
+exports.fetchBlockedUsers = functions.https.onCall(async (data, _context) => {
   try {
     const { userID, page, size } = data
     console.log(`fetching reported users `)

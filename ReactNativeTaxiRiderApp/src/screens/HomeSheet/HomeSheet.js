@@ -193,17 +193,16 @@ const HomeSheet = props => {
       style={contentContainerStyle}
       onLayout={isFocus && handleOnLayout}>
       <Pressable
-        // onPress={onSearchLocation}
+        onPress={onSearchLocation}
         style={[styles.whereTitleBox, { height: whereTitleBoxHeight }]}>
-        <Text style={styles.whereTitleText}>
-          {localized('Add Service Description')}
-        </Text>
+        <Text style={styles.whereTitleText}>{localized('Where to?')}</Text>
 
-        {/*<View style={styles.searchContainer}>*/}
-        {/*  <Text style={styles.searchTitle}>{localized('Search')}</Text>*/}
-        {/*</View>*/}
+        <View style={styles.searchContainer}>
+          <Text style={styles.searchTitle}>{localized('Search')}</Text>
+        </View>
       </Pressable>
-      {/*{savedPlaces.map(renderSavedPlace)}*/}
+
+      {savedPlaces.map(renderSavedPlace)}
     </BottomSheetView>
   )
 }

@@ -13,7 +13,7 @@ exports.fetchUser = async userID => {
 
 exports.fetchUserByEmail = async email => {
   const snapshot = await usersRef.where('email', '==', email).get()
-  if (snapshot?.docs?.length == 0) {
+  if (snapshot?.docs?.length === 0) {
     return null
   }
   const user = snapshot.docs[0]

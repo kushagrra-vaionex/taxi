@@ -219,8 +219,8 @@ exports.addMessageReaction = functions.https.onCall(async (data, context) => {
         ...a,
         [v]: []
       }), {})
-      var newMessageReactionsDict = {}
-      var reactionsCount = message?.reactionsCount ? message?.reactionsCount : 0
+      let newMessageReactionsDict = {}
+      let reactionsCount = message?.reactionsCount ? message?.reactionsCount : 0
 
       const userReactionKey = reactionKeys?.find(
         key => messageReactionsDict[key] && messageReactionsDict[key]?.includes(authorID),

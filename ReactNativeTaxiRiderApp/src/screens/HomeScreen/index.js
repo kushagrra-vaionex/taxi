@@ -52,11 +52,11 @@ const HomeScreen = () => {
     navigation.setOptions({
       headerLeft: renderNavHeaderLeft,
     })
-  }, [navigation, hasRoute, hasTrip])
+  }, [navigation, hasRoute, hasTrip, renderNavHeaderLeft])
 
   useEffect(() => {
     filterAvailableCarCategories()
-  }, [cars])
+  }, [cars, filterAvailableCarCategories])
 
   useEffect(() => {
     const unsubscribePaymentMethods =
@@ -71,7 +71,12 @@ const HomeScreen = () => {
       unsubscribePaymentMethods && unsubscribePaymentMethods()
       unsubscribeCars.current && unsubscribeCars.current()
     }
-  }, [])
+  }, [
+    currentUser.id,
+    fetchCarCategories,
+    fetchCurrentTripIfAny,
+    setPaymentMethods,
+  ])
 
   useEffect(() => {
     if (paymentMethods?.length > 0) {
@@ -93,12 +98,14 @@ const HomeScreen = () => {
         }),
       )
     }
-  }, [paymentMethods])
+  }, [currentUser, defaultPaymentKey, dispatch, paymentMethods])
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const setPaymentMethods = methods => {
     dispatch(updatePaymentMethods(methods))
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchCarCategories = () => {
     tripsAPIManager.getCarCategories().then(result => {
       setAllCarCategories(result)
@@ -106,6 +113,7 @@ const HomeScreen = () => {
     })
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchCurrentTripIfAny = () => {
     tripsAPIManager.getTrip(currentUser.inProgressOrderID).then(trip => {
       const tripStatus = {
@@ -134,6 +142,7 @@ const HomeScreen = () => {
     dispatch(setCars(updatedcars))
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const filterAvailableCarCategories = () => {
     const availableCarCategories = allCarCategories?.filter(carCategory => {
       return cars?.find(car => car.carType === carCategory.type)
@@ -152,6 +161,7 @@ const HomeScreen = () => {
     }
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const renderNavHeaderLeft = () => {
     return (
       <MenuIcon

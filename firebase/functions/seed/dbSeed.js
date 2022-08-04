@@ -112,7 +112,7 @@ const createChatChannelsAndMessages = async userIDs => {
         chatMessages[Math.floor(Math.random() * chatMessages.length)]
       var message2 =
         chatMessages[Math.floor(Math.random() * chatMessages.length)]
-      while (message2 == message1) {
+      while (message2 === message1) {
         message2 = chatMessages[Math.floor(Math.random() * chatMessages.length)]
       }
 
@@ -182,7 +182,9 @@ const uploadToCollection = async dataArray => {
   for (const index in dataArray) {
     const collectionName = index
     for (const doc in dataArray[index]) {
+      // eslint-disable-next-line no-prototype-builtins
       if (dataArray[index].hasOwnProperty(doc)) {
+        // eslint-disable-next-line no-await-in-loop
         await uploadDocToCollection(collectionName, doc, dataArray[index][doc])
       }
     }
@@ -223,9 +225,10 @@ const deleteAllCollections = async () => {
     'posts',
     'stories',
   ]
-  for (var i = 0; i < collections.length; i++) {
-    await deleteCollection(collections[i])
-    console.log(`Deleted collection ${collections[i]}`)
+  for (let i = 0; i < collections.length; i++){
+    const element = collections[i]
+    await deleteCollection(element)
+    console.log(`Deleted collection ${element}`)
   }
 }
 

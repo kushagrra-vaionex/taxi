@@ -144,6 +144,7 @@ const updateAuthoredEntries = async (userData, collectionName) => {
   let docs = querySnapshot.docs
   for (let doc of docs) {
     var data = { author: userData }
+    // eslint-disable-next-line no-await-in-loop
     await doc.ref.set(data, { merge: true })
   }
 }

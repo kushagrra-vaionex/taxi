@@ -23,10 +23,10 @@ export const ConfigProvider = ({ children }) => {
     forgotPasswordEnabled: true,
     appIdentifier: 'rn-taxi-app-android',
     onboardingConfig: {
-      // welcomeTitle: localized('Locksmith'),
-      // welcomeCaption: localized(
-      //   'Book a cab, track your ride and rate your driver.',
-      // ),
+      welcomeTitle: localized('Service Provider'),
+      welcomeCaption: localized(
+        'Book a Service Provider, track your service provider and rate your service provider.',
+      ),
       walkthroughScreens: [
         {
           icon: require('../assets/icons/booktaxi.jpg.png'),
@@ -258,15 +258,15 @@ export const ConfigProvider = ({ children }) => {
             {
               displayName: localized('Address'),
               type: 'text',
-              editable: true,
+              editable: false,
               key: 'push_notifications_enabled',
-              value: '142 Steiner Street, San Francisco, CA, 94115',
+              value: '19702 Newark, Delaware, USA',
             },
             {
               displayName: localized('E-mail us'),
               value: 'admin@vaionex.com',
               type: 'text',
-              editable: true,
+              editable: false,
               key: 'email',
               placeholder: 'Your e-mail address',
             },

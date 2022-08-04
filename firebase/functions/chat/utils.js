@@ -162,7 +162,7 @@ const broadcastNotificationToAllParticipants = async (channelID, message) => {
   const participants = channel?.participants
 
   const otherParticipants = participants?.filter(
-    participant => participant && participant.id != sender.id,
+    participant => participant && participant.id !== sender.id,
   )
 
   const isGroupChat = channel.name && channel.name.length > 0

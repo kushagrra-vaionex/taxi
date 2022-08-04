@@ -1,6 +1,12 @@
 const functions = require('firebase-functions')
 
-const stripe = require('stripe')(functions.config().stripe.test_key)
+const stripe = require('stripe')('pk_test_51LSiA7SG23wo0LMeLU8K06dSaaZrwyJtSm9EYFcDcUgVYpq24wTbdSDSk55j9Y8RFEEqAQVAbcczlWFsxhD42rvC002du2W0aA');
+
+stripe.customers.create({
+  email: 'manoj@vaionex.com',
+})
+    .then(customer => console.log(customer.id))
+    .catch(error => console.error(error));
 
 exports.makeStripePayment = functions.https.onCall(async (data, context) => {
   const { amount, currency } = data

@@ -1,5 +1,5 @@
 import axios from 'axios'
-// import { requestOneTimePayment } from 'react-native-paypal'
+import { requestOneTimePayment } from 'react-native-paypal'
 
 const makeRequest = async (appConfig, endPoint, body) => {
   const apiConnector = axios.create(appConfig.serverSideEnv.API)
@@ -37,18 +37,18 @@ export const checkoutPaypal = async (appConfig, options) => {
   return res?.data
 }
 
-// export const chargePaypalCustomer = async ({ amount, currency, token }) => {
-//   return new Promise(resolve => {
-//     requestOneTimePayment(token, {
-//       amount: amount, // required
-//       currency: currency,
-//       localeCode: 'en_US',
-//       shippingAddressRequired: false,
-//     })
-//       .then(chargeResponse => resolve({ success: true, ...chargeResponse }))
-//       .catch(err => resolve({ success: false, error: err }))
-//   })
-// }
+export const chargePaypalCustomer = async ({ amount, currency, token }) => {
+  return new Promise(resolve => {
+    requestOneTimePayment(token, {
+      amount: amount, // required
+      currency: currency,
+      localeCode: 'en_US',
+      shippingAddressRequired: false,
+    })
+      .then(chargeResponse => resolve({ success: true, ...chargeResponse }))
+      .catch(err => resolve({ success: false, error: err }))
+  })
+}
 
 export const chargeStripeCustomer = async (appConfig, body) => {
   const endPoint = '/charge-card-off-session'
